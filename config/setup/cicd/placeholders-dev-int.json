@@ -1,0 +1,11 @@
+{
+    "config.js": {
+        "path":"config/",
+        "replacements": {
+            "appId": "directv",
+            "appTitle": "directv enterprise applications",
+            "guest" : true
+
+        }
+    }
+}

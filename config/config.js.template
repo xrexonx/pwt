@@ -1,0 +1,6 @@
+var dfwPlatformUIAppConfig =
+{
+  appTitle: "[appTitle]",
+  appId: "[appId]",
+  guest : "[guest]"
+};

@@ -9,6 +9,21 @@ app-drawer-layout:not([narrow]) [drawer-toggle] {
   display: none;
 }
 
+//app-drawer section {
+//  height: 100%;
+//  overflow-y: auto;
+//  -webkit-overflow-scrolling: touch;
+//}
+//app-drawer h2 {
+//  margin: 8px 0 0;
+//  padding: 18px;
+//  font-size: 18px;
+//}
+//app-drawer paper-checkbox {
+//  display: block;
+//  padding: 18px;
+//}
+
 app-header {
   color: #fff;
   background-color: var(--app-primary-color);

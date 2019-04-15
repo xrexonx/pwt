@@ -1,7 +1,7 @@
-var dfwPlatformUIAppConfig =
+const dfwPlatformUIAppConfig =
 {
-  appTitle: "directv enterprise applications",
-  appId: "directv",  // The appid from the policy manager
   appConfigUrl: "local",
+  appId: "directv",  // The appid from the policy manager
+  appTitle: "directv enterprise applications",
   guest : true
 };

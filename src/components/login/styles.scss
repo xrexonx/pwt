@@ -1,0 +1,38 @@
+section {
+  margin: 8px 10px 8px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+
+  .login-container {
+    @apply --layout-horizontal;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .login-container > * {
+    @apply --layout-flex;
+  }
+  .login-container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .login-container h5 {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 24px 0;
+  }
+  paper-button {
+    margin-top: 20px;
+    background-color: #0568ae;
+    color: #fff;
+    width: 100%;
+  }
+  .login-form {
+    padding: 20px;
+  }
+  @media (max-width: 600px) {
+    .login-container {
+      @apply --layout-vertical;
+    }
+  }
+}
+

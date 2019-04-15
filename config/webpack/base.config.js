@@ -19,14 +19,14 @@ module.exports = (config) => ({
     alias: customLoaders,
   },
   resolve: {
-    extensions: ['.ts', '.js', '.scss', '.sass', '.html'],
+    extensions: ['.ts', '.js', '.scss', '.sass', '.html']
   },
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/,
-        use:
-          {[
+        use: [
+          {
             loader: 'to-string-loader',
           },
           {
@@ -40,9 +40,9 @@ module.exports = (config) => ({
           },
           {
             loader: 'sass-loader',
-          },
-        ],
-      },
-    ],
-  },
+          }
+        ]
+      }
+    ]
+  }
 });

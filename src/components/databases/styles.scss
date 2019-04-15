@@ -1,0 +1,42 @@
+section {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 10px 0 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+
+  div.icon-list {
+    display: block;
+    padding: 8px 8px 8px 18px;
+    font-size: 14px;
+  }
+  paper-card {
+    margin: 8px 0 0;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+  .data-list {
+    padding: 10px;
+  }
+  app-header {
+    background-color: #0568ae;
+    color: #fff;
+    margin: 8px 0 0;
+
+    app-toolbar {
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+
+  paper-dialog {
+    width: 600px;
+
+    .database-form {
+      margin-left: 30px;
+    }
+  }
+}
+

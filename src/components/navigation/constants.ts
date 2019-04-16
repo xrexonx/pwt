@@ -1,4 +1,4 @@
-export const LTM_PAGES: any = [
+export const LTM_PAGES: string[] = [
   'navigation',
   'geography',
   'databases',

@@ -682,6 +682,25 @@
     "@polymer/paper-input" "^3.0.0-pre.18"
     "@polymer/polymer" "^3.0.0"
 
+"@ovp/dfw-login@http://developer-ui.ds.dtveng.net/poly3/dfw-login.tar.gz":
+  version "3.0.0"
+  resolved "http://developer-ui.ds.dtveng.net/poly3/dfw-login.tar.gz#43d886916779048b96f1ef195697f3e0ced43b5d"
+  dependencies:
+    "@ovp/dfw-audit" "http://developer-ui.ds.dtveng.net/poly3/dfw-audit.tar.gz"
+    "@ovp/dfw-status-dialog" "http://developer-ui.ds.dtveng.net/poly3/dfw-status-dialog.tar.gz"
+    "@ovp/ovp-config" "http://developer-ui.ds.dtveng.net/poly3/ovp-config.tar.gz"
+    "@polymer/iron-localstorage" "^3.0.0-pre.18"
+    "@polymer/polymer" "^3.0.0"
+
+"@ovp/dfw-status-dialog@http://developer-ui.ds.dtveng.net/poly3/dfw-status-dialog.tar.gz":
+  version "3.0.0"
+  resolved "http://developer-ui.ds.dtveng.net/poly3/dfw-status-dialog.tar.gz#7d14d734535cb954b97ad90e2e0d67265c49754e"
+  dependencies:
+    "@ovp/dfw-styles" "http://developer-ui.ds.dtveng.net/poly3/dfw-styles.tar.gz"
+    "@polymer/paper-button" "^3.0.0-pre.18"
+    "@polymer/paper-dialog" "^3.0.0-pre.18"
+    "@polymer/polymer" "^3.0.0"
+
 "@ovp/dfw-styles@http://developer-ui.ds.dtveng.net/poly3/dfw-styles.tar.gz":
   version "3.0.0"
   resolved "http://developer-ui.ds.dtveng.net/poly3/dfw-styles.tar.gz#d0dc6cb3781a6862657084481d2110c566772f7e"
@@ -1041,7 +1060,7 @@
     "@polymer/paper-styles" "^3.0.0-pre.26"
     "@polymer/polymer" "^3.0.0"
 
-"@polymer/paper-dialog@^3.0.1":
+"@polymer/paper-dialog@^3.0.0-pre.18", "@polymer/paper-dialog@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@polymer/paper-dialog/-/paper-dialog-3.0.1.tgz#728ebdbfc4d35ec1485e543434cef5dba476f15e"
   integrity sha512-KvglYbEq7AWJvui2j6WKLnOvgVMeGjovAydGrPRj7kVzCiD49Eq/hpYFJTRV5iDcalWH+mORUpw+jrFnG9+Kgw==

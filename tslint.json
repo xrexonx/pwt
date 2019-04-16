@@ -121,6 +121,7 @@
     "array-bracket-spacing": [
       true,
       "never"
-    ]
+    ],
+    "no-this-assignment": false
   }
 }

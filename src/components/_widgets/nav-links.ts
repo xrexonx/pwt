@@ -12,6 +12,12 @@ import '@polymer/iron-icons/iron-icons';
 import { titleize } from '../_utils/string';
 import { SIDE_NAV_LINKS } from '../navigation/constants';
 
+interface Link {
+  title: string;
+  icon: string;
+  routeName: string;
+}
+
 @customElement('nav-links')
 class NavLinks extends LitElement {
   @property() name: string;
@@ -51,8 +57,8 @@ class NavLinks extends LitElement {
   }
 
   render(): TemplateResult {
-    // const { name } = this;
-    const navLInks = SIDE_NAV_LINKS[this.name];
+    const { name } = this;
+    const navLInks: Link[] = SIDE_NAV_LINKS[name];
 
     if (!navLInks) {
       return html``;
@@ -60,9 +66,9 @@ class NavLinks extends LitElement {
 
     return html`
       <div class="side-nav">
-        <h2>${titleize(this.name)}</h2>
+        <h2>${titleize(name)}</h2>
         ${navLInks.map(
-          (link: any) => html`
+          (link: Link) => html`
             <a
               name="${link.routeName}"
               href="/${link.routeName}"

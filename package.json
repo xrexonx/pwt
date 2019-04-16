@@ -14,6 +14,7 @@
     "@exmg/exmg-paper-datatable": "^3.0.5",
     "@exmg/exmg-paper-tooltip": "^3.0.0",
     "@ovp/dfw-audit": "http://developer-ui.ds.dtveng.net/poly3/dfw-audit.tar.gz",
+    "@ovp/dfw-login": "http://developer-ui.ds.dtveng.net/poly3/dfw-login.tar.gz",
     "@ovp/dfw-styles": "http://developer-ui.ds.dtveng.net/poly3/dfw-styles.tar.gz",
     "@polymer/app-layout": "^3.0.2",
     "@polymer/app-route": "^3.0.2",

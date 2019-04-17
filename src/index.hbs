@@ -35,23 +35,29 @@
     <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
     <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
 
-<!--      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-<!--      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">-->
-<!--      <script src="/config/config.js"></script>-->
     <!-- Tile icon for Windows 8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
     <meta name="msapplication-TileColor" content="#3f51b5">
     <meta name="msapplication-tap-highlight" content="no">
 
     <script>
+      /* DFW Configs*/
+      let dfwPlatformUIAppConfig = {
+          appConfigUrl: "local",
+          appId: "directv",  // The appid from the policy manager
+          appTitle: "directv enterprise applications",
+          guest : true
+      };
+    </script>
+    <script>
       window.Polymer = {rootPath: '{{htmlWebpackPlugin.options.config.app.basePath}}'};
-      // Load and register pre-caching Service Worker
+          // Load and register pre-caching Service Worker
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-          navigator.serviceWorker.register('sw.js', {
-            scope: Polymer.rootPath,
+          window.addEventListener('load', function () {
+              navigator.serviceWorker.register('sw.js', {
+                scope: Polymer.rootPath,
+              });
           });
-        });
       }
     </script>
 
@@ -60,7 +66,7 @@
     <script src="scripts/wc/custom-elements-es5-adapter.js"></script>
     {{/if}}
 
-    <!-- Add any global styles for body, document, etc. -->
+      <!-- Add any global styles for body, document, etc. -->
     <style>
       body {
         margin: 0;

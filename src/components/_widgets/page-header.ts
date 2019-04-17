@@ -16,9 +16,8 @@ export class PageHeader extends LitElement {
   static get styles() {
     return css`
       app-header {
-        background-color: #0568ae;
         color: #fff;
-        margin: 8px 0 0;
+        background-color: #0568ae;
       }
       app-toolbar {
         height: 50px;

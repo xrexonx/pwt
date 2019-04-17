@@ -1,4 +1,4 @@
-const dfwPlatformUIAppConfig =
+var dfwPlatformUIAppConfig =
 {
   appConfigUrl: "local",
   appId: "directv",  // The appid from the policy manager

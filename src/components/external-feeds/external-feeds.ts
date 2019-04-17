@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer';
 import '../_widgets/data-table';
 import '../_widgets/page-header';
 import { fetchExternalFeeds } from './services';
+import '@polymer/iron-ajax/iron-ajax';
 
 export class ExternalFeeds extends PolymerElement {
   ready() {
@@ -17,11 +18,8 @@ export class ExternalFeeds extends PolymerElement {
     return html`
       <style>
         section {
-          height: 100%;
-          overflow-y: auto;
-          -webkit-overflow-scrolling: touch;
-          margin: 0 10px 0 10px;
           border-radius: 2px;
+          margin: 8px 10px 8px 10px;
           background-color: #ffffff;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
           overflow-x: hidden;
@@ -29,6 +27,12 @@ export class ExternalFeeds extends PolymerElement {
       </style>
       <section>
         <page-header title="TMS Stations" icon="add"></page-header>
+        <iron-ajax
+          url="https://reqres.in/api/users"
+          last-response="{{rawItems}}"
+          auto=""
+        >
+        </iron-ajax>
         <data-table raw-items="[[items]]"></data-table>
       </section>
     `;

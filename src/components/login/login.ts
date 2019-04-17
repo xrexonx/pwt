@@ -5,6 +5,8 @@ import '../_widgets/page-header';
 import { loginSubmit } from './services';
 import styles from './styles.scss';
 
+import '@ovp/dfw-login/dfw-login';
+
 export class LoginPage extends PolymerElement {
   username: string;
   password: string;
@@ -21,7 +23,32 @@ export class LoginPage extends PolymerElement {
   }
 
   onSubmit() {
-    loginSubmit(this.username, this.password);
+    // loginSubmit(this.username, this.password);
+    this.$.postLogin.url = 'https://reqres.in/api/login';
+    this.$.postLogin.body = { email: this.username, password: this.password};
+    this.$.postLogin.generateRequest();
+  }
+
+  handleLoginResponse(data: any) {
+    const response = JSON.parse(data.detail.response);
+    console.log({ response });
+    // if (response.id_token) {
+    //   this.error = '';
+    //   this.storedUser = {
+    //     name: this.formData.username,
+    //     id_token: response.id_token,
+    //     access_token: response.access_token,
+    //     loggedin: true
+    //   };
+    //   // redirect to Secret Quotes
+    //   this.set('route.path', '/secret-quotes');
+    // }
+    // // reset form data
+    // this.formData = {};
+  }
+  handleLoginError(event: any) {
+    console.log(event.detail.request.xhr.response );
+    // this.error = event.detail.request.xhr.response;
   }
 
   static get template() {
@@ -53,6 +80,18 @@ export class LoginPage extends PolymerElement {
             >
           </div>
         </div>
+<!--        <dfw-login-->
+<!--          id="dfw-login"-->
+<!--          user-name="{{userName}}">-->
+<!--        </dfw-login>-->
+        <iron-ajax
+          id="postLogin"
+          method="post"
+          content-type="application/json"
+          handle-as="text"
+          on-response="handleLoginResponse"
+          on-error="handleLoginError">
+        </iron-ajax>
       </section>
     `]);
   }

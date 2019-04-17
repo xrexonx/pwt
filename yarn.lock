@@ -764,7 +764,7 @@
   dependencies:
     "@polymer/polymer" "^3.0.0"
 
-"@polymer/iron-ajax@^3.0.0-pre.21":
+"@polymer/iron-ajax@^3.0.0-pre.21", "@polymer/iron-ajax@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@polymer/iron-ajax/-/iron-ajax-3.0.1.tgz#831781be31ced011ac7243a46e34a775a4bb3133"
   integrity sha512-7+TPEAfWsRdhj1Y8UeF1759ktpVu+c3sG16rJiUC3wF9+woQ9xI1zUm2d59i7Yc3aDEJrR/Q8Y262KlOvyGVNg==

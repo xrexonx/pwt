@@ -1,4 +1,4 @@
-export const dataItems = [
+[
   {
     "index": 0,
     "name": "Liz Grimes",
@@ -2243,4 +2243,4 @@ export const dataItems = [
     "phone": "(920) 452-3377",
     "color": "rgb(69,58,250)"
   }
-];
+]

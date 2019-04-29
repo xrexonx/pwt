@@ -24,7 +24,7 @@ class TableList extends PolymerElement {
 
   stopTap(e: any) {
     // Do something
-    console.log(' Do something', e);
+    // console.log(' Do something', e);
     e.stopPropagation();
   }
 

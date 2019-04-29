@@ -69,11 +69,7 @@ class NavLinks extends LitElement {
         <h2>${titleize(name)}</h2>
         ${navLInks.map(
           (link: Link) => html`
-            <a
-              name="${link.routeName}"
-              href="/${link.routeName}"
-              class="link"
-            >
+            <a name="${link.routeName}" href="/${link.routeName}" class="link">
               <iron-icon icon="${link.icon || 'chevron-right'}"> </iron-icon>
               &nbsp; ${link.title}
             </a>

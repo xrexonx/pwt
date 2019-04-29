@@ -9,7 +9,6 @@ import {
 
 @customElement('page-header')
 export class PageHeader extends LitElement {
-
   @property() icon: string;
   @property() title: string;
 
@@ -26,7 +25,7 @@ export class PageHeader extends LitElement {
     `;
   }
 
-  render(): TemplateResult  {
+  render(): TemplateResult {
     return html`
       <app-header slot="header" reveals effects="waterfall">
         <app-toolbar>

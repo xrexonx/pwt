@@ -25,13 +25,13 @@ export class LoginPage extends PolymerElement {
   onSubmit() {
     // loginSubmit(this.username, this.password);
     this.$.postLogin.url = 'https://reqres.in/api/login';
-    this.$.postLogin.body = { email: this.username, password: this.password};
+    this.$.postLogin.body = { email: this.username, password: this.password };
     this.$.postLogin.generateRequest();
   }
 
   handleLoginResponse(data: any) {
     const response = JSON.parse(data.detail.response);
-    console.log({ response });
+    // console.log({ response });
     // if (response.id_token) {
     //   this.error = '';
     //   this.storedUser = {
@@ -47,12 +47,13 @@ export class LoginPage extends PolymerElement {
     // this.formData = {};
   }
   handleLoginError(event: any) {
-    console.log(event.detail.request.xhr.response );
+    // console.log(event.detail.request.xhr.response);
     // this.error = event.detail.request.xhr.response;
   }
 
   static get template() {
-    return html([`
+    return html([
+      `
       <style>${styles}</style>
       <section>
         <page-header title="Login"></page-header>
@@ -93,7 +94,8 @@ export class LoginPage extends PolymerElement {
           on-error="handleLoginError">
         </iron-ajax>
       </section>
-    `]);
+    `
+    ]);
   }
 }
 

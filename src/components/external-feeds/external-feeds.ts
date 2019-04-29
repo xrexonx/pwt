@@ -27,12 +27,12 @@ export class ExternalFeeds extends PolymerElement {
       </style>
       <section>
         <page-header title="TMS Stations" icon="add"></page-header>
-        <iron-ajax
-          url="https://reqres.in/api/users"
-          last-response="{{rawItems}}"
-          auto=""
-        >
-        </iron-ajax>
+        <!--        <iron-ajax-->
+        <!--          url="https://reqres.in/api/users"-->
+        <!--          last-response="{{rawItems}}"-->
+        <!--          auto=""-->
+        <!--        >-->
+        <!--        </iron-ajax>-->
         <data-table raw-items="[[items]]"></data-table>
       </section>
     `;

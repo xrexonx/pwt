@@ -51,7 +51,7 @@ export class MainPage extends PolymerElement {
   pageChanged(page: string) {
     if (page !== 'ltm') {
       const component = splitJoinString(page, '_', '-');
-      import(`../${component}/${component}`).catch(e => console.log(e));
+      import(`../${component}/${component}`);
     }
   }
 
@@ -60,7 +60,8 @@ export class MainPage extends PolymerElement {
   }
 
   static get template() {
-    return html([`
+    return html([
+      `
       <style>${styles}</style>
       <app-location route="{{route}}"></app-location>
       <app-route
@@ -97,7 +98,8 @@ export class MainPage extends PolymerElement {
           </iron-pages>
         </app-header-layout>
       </app-drawer-layout>
-    `]);
+    `
+    ]);
   }
 }
 

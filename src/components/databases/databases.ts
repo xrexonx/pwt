@@ -26,7 +26,7 @@ export class DatabasesPage extends PolymerElement {
   }
 
   submitForm() {
-    console.log('selected database', this.selectedDB);
+    // console.log('selected database', this.selectedDB);
   }
 
   static get is() {
@@ -45,7 +45,8 @@ export class DatabasesPage extends PolymerElement {
   }
 
   static get template() {
-    return html([`
+    return html([
+      `
       <style>${styles}</style>
       <section>
         <app-header slot="header" reveals effects="waterfall">
@@ -94,7 +95,8 @@ export class DatabasesPage extends PolymerElement {
           </div>
         </paper-dialog>
       </section>
-    `]);
+    `
+    ]);
   }
 }
 

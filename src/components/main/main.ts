@@ -8,7 +8,7 @@ import '@polymer/paper-tabs/paper-tab';
 
 class DashboardPage extends PolymerElement {
   tabChanged(tab: string) {
-    console.log('tab', tab);
+    // console.log('tab', tab);
     // if (tab !== 'ltm') {
     //   import(getPageUrl(tab));
     // }
@@ -51,9 +51,6 @@ class DashboardPage extends PolymerElement {
           selected="[[tab]]"
           attr-for-selected="name"
         >
-<!--          <sample-content name="main-menu" size="1"></sample-content>-->
-<!--          <sample-content name="reports" size="1"></sample-content>-->
-<!--          <sample-content name="job-calendar" size="1"></sample-content>-->
         </iron-pages>
       </section>
     `;

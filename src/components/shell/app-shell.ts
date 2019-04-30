@@ -1,13 +1,13 @@
-import { html, property, LitElement, TemplateResult } from 'lit-element';
+import { html, property, LitElement, TemplateResult } from "lit-element";
 
-import '../main/index';
+import "../main/index";
 // import '../login/login';
 
 export class AppShell extends LitElement {
   @property() authenticated: boolean;
 
   static get is() {
-    return 'app-shell';
+    return "app-shell";
   }
 
   render(): TemplateResult {

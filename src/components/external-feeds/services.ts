@@ -1,4 +1,4 @@
-import { dataItems } from './data';
+import { dataItems } from "./data";
 
 export function fetchExternalFeeds() {
   return dataItems;

@@ -1,13 +1,13 @@
-import { html, PolymerElement } from '@polymer/polymer/polymer-element';
-import '../shared-styles';
-import style from './view404.style.scss';
-import view from './view404.template.html';
+import { html, PolymerElement } from "@polymer/polymer/polymer-element";
+import "../shared-styles";
+import style from "./view404.style.scss";
+import view from "./view404.template.html";
 
 export class MyView404 extends PolymerElement {
   $: any;
 
   static get is() {
-    return 'my-view404';
+    return "my-view404";
   }
 
   static get template() {

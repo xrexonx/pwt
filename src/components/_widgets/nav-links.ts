@@ -4,13 +4,13 @@ import {
   property,
   customElement,
   LitElement,
-  TemplateResult
-} from 'lit-element';
-import '@polymer/paper-checkbox/paper-checkbox';
-import '@polymer/iron-icon/iron-icon';
-import '@polymer/iron-icons/iron-icons';
-import { titleize } from '../_utils/string';
-import { SIDE_NAV_LINKS } from '../navigation/constants';
+  TemplateResult,
+} from "lit-element";
+import "@polymer/paper-checkbox/paper-checkbox";
+import "@polymer/iron-icon/iron-icon";
+import "@polymer/iron-icons/iron-icons";
+import { titleize } from "../_utils/string";
+import { SIDE_NAV_LINKS } from "../navigation/constants";
 
 interface Link {
   title: string;
@@ -18,12 +18,12 @@ interface Link {
   routeName: string;
 }
 
-@customElement('nav-links')
+@customElement("nav-links")
 class NavLinks extends LitElement {
   @property() name: string;
 
   static get is() {
-    return 'nav-links';
+    return "nav-links";
   }
 
   static get styles() {
@@ -70,10 +70,10 @@ class NavLinks extends LitElement {
         ${navLInks.map(
           (link: Link) => html`
             <a name="${link.routeName}" href="/${link.routeName}" class="link">
-              <iron-icon icon="${link.icon || 'chevron-right'}"> </iron-icon>
+              <iron-icon icon="${link.icon || "chevron-right"}"> </iron-icon>
               &nbsp; ${link.title}
             </a>
-          `
+          `,
         )}
       </div>
     `;

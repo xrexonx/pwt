@@ -1,14 +1,14 @@
-import { html, PolymerElement } from '@polymer/polymer/polymer-element';
-import '../../icons';
-import '../../shared-styles';
-import style from './dynamic-subview.style.scss';
-import view from './dynamic-subview.template.html';
+import { html, PolymerElement } from "@polymer/polymer/polymer-element";
+import "../../icons";
+import "../../shared-styles";
+import style from "./dynamic-subview.style.scss";
+import view from "./dynamic-subview.template.html";
 
 export class MyDynamicSubview extends PolymerElement {
   $: any;
 
   static get is() {
-    return 'my-dynamic-subview';
+    return "my-dynamic-subview";
   }
 
   static get template() {
@@ -20,8 +20,8 @@ export class MyDynamicSubview extends PolymerElement {
       dynamicPath: String,
       subviewName: {
         type: String,
-        computed: 'computeSubviewName(dynamicPath)'
-      }
+        computed: "computeSubviewName(dynamicPath)",
+      },
     };
   }
 
@@ -32,12 +32,12 @@ export class MyDynamicSubview extends PolymerElement {
   computeSubviewName(dynamicPath: string) {
     return dynamicPath
       ? dynamicPath
-          .split('-')
+          .split("-")
           .map(
-            word => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`
+            (word) => `${word[0].toUpperCase()}${word.substr(1).toLowerCase()}`,
           )
-          .join(' ')
-      : '';
+          .join(" ")
+      : "";
   }
 }
 

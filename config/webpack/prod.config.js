@@ -36,7 +36,7 @@ module.exports = merge(baseConfig(config), {
         enforce: 'pre',
         loader: 'tslint-loader',
         options: {
-          tsConfigFile: resolve(__dirname, '../../tslint.json'),
+          tsConfigFile: resolve(__dirname, '../../tsconfig.json'),
           failOnHint: true,
           typeCheck: true,
           fix: true,

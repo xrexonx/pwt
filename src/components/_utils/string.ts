@@ -8,7 +8,7 @@ export function ucfirst(str: string) {
 export function splitJoinString(
   str: string,
   splitter: string,
-  separator: string
+  separator: string,
 ) {
   if (str) {
     return str.split(splitter).join(separator);
@@ -16,10 +16,10 @@ export function splitJoinString(
 }
 
 export function titleize(str: string) {
-  return splitJoinString(str, '_', ' ');
+  return splitJoinString(str, "_", " ");
 }
 
 export function getPageUrl(page: string) {
-  const component = splitJoinString(page, '_', '-');
+  const component = splitJoinString(page, "_", "-");
   return `../${component}/${component}`;
 }

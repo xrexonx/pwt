@@ -1,31 +1,31 @@
-import '@polymer/app-layout/app-drawer-layout/app-drawer-layout';
-import '@polymer/app-layout/app-header-layout/app-header-layout';
-import '@polymer/app-layout/app-drawer/app-drawer';
-import '@polymer/app-layout/app-toolbar/app-toolbar';
-import '@polymer/app-layout/app-scroll-effects/app-scroll-effects';
-import '@polymer/app-layout/app-header/app-header';
-import '@polymer/app-layout/demo/sample-content';
-import '@polymer/app-route/app-route';
-import '@polymer/app-route/app-location';
-import '@polymer/iron-pages/iron-pages';
-import '@polymer/iron-selector/iron-selector';
-import '@polymer/iron-flex-layout/iron-flex-layout';
-import '@polymer/paper-icon-button/paper-icon-button';
-import '@ovp/dfw-styles/dfw-styles';
-import '@ovp/dfw-styles/dfw-custom-icons';
-import { html, PolymerElement } from '@polymer/polymer/polymer-element';
+import "@polymer/app-layout/app-drawer-layout/app-drawer-layout";
+import "@polymer/app-layout/app-header-layout/app-header-layout";
+import "@polymer/app-layout/app-drawer/app-drawer";
+import "@polymer/app-layout/app-toolbar/app-toolbar";
+import "@polymer/app-layout/app-scroll-effects/app-scroll-effects";
+import "@polymer/app-layout/app-header/app-header";
+import "@polymer/app-layout/demo/sample-content";
+import "@polymer/app-route/app-route";
+import "@polymer/app-route/app-location";
+import "@polymer/iron-pages/iron-pages";
+import "@polymer/iron-selector/iron-selector";
+import "@polymer/iron-flex-layout/iron-flex-layout";
+import "@polymer/paper-icon-button/paper-icon-button";
+import "@ovp/dfw-styles/dfw-styles";
+import "@ovp/dfw-styles/dfw-custom-icons";
+import { html, PolymerElement } from "@polymer/polymer/polymer-element";
 
-import './main';
-import '../navigation/side-nav';
+import "./main";
+import "../navigation/side-nav";
 
-import styles from './styles.scss';
-import { splitJoinString } from '../_utils/string';
+import styles from "./styles.scss";
+import { splitJoinString } from "../_utils/string";
 
 export class MainPage extends PolymerElement {
   page: string;
 
   static get is() {
-    return 'main-page';
+    return "main-page";
   }
 
   static get properties() {
@@ -35,28 +35,28 @@ export class MainPage extends PolymerElement {
       page: {
         type: String,
         reflectToAttribute: true,
-        observer: 'pageChanged'
-      }
+        observer: "pageChanged",
+      },
     };
   }
 
   static get observers() {
-    return ['routePageChanged(routeData.page)'];
+    return ["routePageChanged(routeData.page)"];
   }
 
   routePageChanged(page: string) {
-    this.page = page || 'ltm';
+    this.page = page || "ltm";
   }
 
   pageChanged(page: string) {
-    if (page !== 'ltm') {
-      const component = splitJoinString(page, '_', '-');
+    if (page !== "ltm") {
+      const component = splitJoinString(page, "_", "-");
       import(`../${component}/${component}`);
     }
   }
 
   showPage404() {
-    this.page = 'view404';
+    this.page = "view404";
   }
 
   static get template() {
@@ -98,7 +98,7 @@ export class MainPage extends PolymerElement {
           </iron-pages>
         </app-header-layout>
       </app-drawer-layout>
-    `
+    `,
     ]);
   }
 }

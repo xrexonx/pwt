@@ -1,52 +1,52 @@
-import { PolymerElement, html } from '@polymer/polymer/polymer-element';
-import '@polymer/iron-flex-layout/iron-flex-layout';
-import '@polymer/paper-button/paper-button';
-import '@polymer/paper-icon-button/paper-icon-button';
-import '@polymer/paper-input/paper-input';
-import '@polymer/paper-checkbox/paper-checkbox';
-import '@exmg/exmg-paper-tooltip/exmg-paper-tooltip';
-import '@exmg/exmg-paper-datatable/exmg-paper-datatable';
+import { PolymerElement, html } from "@polymer/polymer/polymer-element";
+import "@polymer/iron-flex-layout/iron-flex-layout";
+import "@polymer/paper-button/paper-button";
+import "@polymer/paper-icon-button/paper-icon-button";
+import "@polymer/paper-input/paper-input";
+import "@polymer/paper-checkbox/paper-checkbox";
+import "@exmg/exmg-paper-tooltip/exmg-paper-tooltip";
+import "@exmg/exmg-paper-datatable/exmg-paper-datatable";
 
-import './/_data-tables/exmg-paper-toolbar.js';
-import './/_data-tables/exmg-paper-thead.js';
-import './/_data-tables/exmg-paper-tbody.js';
-import './/_data-tables/exmg-paper-paging.js';
-import './/_data-tables/exmg-paper-data-helper.js';
-import './/_data-tables/exmg-paper-data-filter.js';
-import './/_data-tables/exmg-paper-icons.js';
+import ".//_data-tables/exmg-paper-toolbar.js";
+import ".//_data-tables/exmg-paper-thead.js";
+import ".//_data-tables/exmg-paper-tbody.js";
+import ".//_data-tables/exmg-paper-paging.js";
+import ".//_data-tables/exmg-paper-data-helper.js";
+import ".//_data-tables/exmg-paper-data-filter.js";
+import ".//_data-tables/exmg-paper-icons.js";
 
 class DataTable extends PolymerElement {
   static get properties() {
     return {
       pageIndex: {
         type: Number,
-        value: 0
+        value: 0,
       },
       pageSize: {
         type: Number,
-        value: 10
+        value: 10,
       },
       sorted: {
         type: String,
-        value: 'name'
+        value: "name",
       },
       sortDirection: {
         type: String,
-        value: 'ASC'
+        value: "ASC",
       },
       filterValue: {
         type: String,
-        value: ''
+        value: "",
       },
       isSearch: {
         type: Boolean,
-        value: false
+        value: false,
       },
       placeHolder: {
         type: String,
-        value: 'Search chuchu here'
+        value: "Search chuchu here",
       },
-      rawItems: { type: Array }
+      rawItems: { type: Array },
     };
   }
 
@@ -62,17 +62,17 @@ class DataTable extends PolymerElement {
     this.hideSearch();
   }
   hideSearch() {
-    this.set('isSearch', false);
+    this.set("isSearch", false);
   }
   showSearch() {
-    this.set('isSearch', true);
+    this.set("isSearch", true);
     setTimeout(
-      () => this.shadowRoot.querySelector('#searchInput').focus(),
-      200
+      () => this.shadowRoot.querySelector("#searchInput").focus(),
+      200,
     );
   }
   computeSearchClasses(isSearch: string) {
-    return isSearch ? 'search' : '';
+    return isSearch ? "search" : "";
   }
 
   static get template() {
@@ -224,4 +224,4 @@ class DataTable extends PolymerElement {
   }
 }
 
-customElements.define('data-table', DataTable);
+customElements.define("data-table", DataTable);

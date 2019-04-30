@@ -1,9 +1,9 @@
-import { PolymerElement, html } from '@polymer/polymer';
-import '@polymer/paper-input/paper-input';
-import '@polymer/paper-button/paper-button';
-import '../_widgets/page-header';
-import '@polymer/paper-tabs/paper-tabs';
-import '@polymer/paper-tabs/paper-tab';
+import { PolymerElement, html } from "@polymer/polymer";
+import "@polymer/paper-input/paper-input";
+import "@polymer/paper-button/paper-button";
+import "../_widgets/page-header";
+import "@polymer/paper-tabs/paper-tabs";
+import "@polymer/paper-tabs/paper-tab";
 // import {getPageUrl} from "../../_utils/string";
 
 class DashboardPage extends PolymerElement {
@@ -17,10 +17,10 @@ class DashboardPage extends PolymerElement {
   static get properties() {
     return {
       tab: {
-        observer: 'tabChanged',
-        type: String
+        observer: "tabChanged",
+        type: String,
       },
-      tabData: Object
+      tabData: Object,
     };
   }
 
@@ -57,4 +57,4 @@ class DashboardPage extends PolymerElement {
   }
 }
 
-customElements.define('dashboard-page', DashboardPage);
+customElements.define("dashboard-page", DashboardPage);

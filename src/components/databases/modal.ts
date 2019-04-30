@@ -1,8 +1,8 @@
-import { html } from '@polymer/polymer/polymer-element';
-import '@polymer/paper-button/paper-button';
-import '@polymer/paper-dialog/paper-dialog';
-import '@polymer/paper-radio-button/paper-radio-button';
-import '@polymer/paper-radio-group/paper-radio-group';
+import { html } from "@polymer/polymer/polymer-element";
+import "@polymer/paper-button/paper-button";
+import "@polymer/paper-dialog/paper-dialog";
+import "@polymer/paper-radio-button/paper-radio-button";
+import "@polymer/paper-radio-group/paper-radio-group";
 
 export const databaseModal = html`
   <paper-dialog id="actions">

@@ -1,30 +1,30 @@
-import { PolymerElement, html } from '@polymer/polymer/polymer-element';
-import '@polymer/paper-input/paper-input';
-import '@polymer/paper-button/paper-button';
-import '../_widgets/page-header';
-import { loginSubmit } from './services';
-import styles from './styles.scss';
+import { PolymerElement, html } from "@polymer/polymer/polymer-element";
+import "@polymer/paper-input/paper-input";
+import "@polymer/paper-button/paper-button";
+import "../_widgets/page-header";
+import { loginSubmit } from "./services";
+import styles from "./styles.scss";
 
-import '@ovp/dfw-login/dfw-login';
+import "@ovp/dfw-login/dfw-login";
 
 export class LoginPage extends PolymerElement {
   username: string;
   password: string;
 
   static get is() {
-    return 'login-page';
+    return "login-page";
   }
 
   static get properties() {
     return {
       username: String,
-      password: String
+      password: String,
     };
   }
 
   onSubmit() {
     // loginSubmit(this.username, this.password);
-    this.$.postLogin.url = 'https://reqres.in/api/login';
+    this.$.postLogin.url = "https://reqres.in/api/login";
     this.$.postLogin.body = { email: this.username, password: this.password };
     this.$.postLogin.generateRequest();
   }
@@ -94,7 +94,7 @@ export class LoginPage extends PolymerElement {
           on-error="handleLoginError">
         </iron-ajax>
       </section>
-    `
+    `,
     ]);
   }
 }

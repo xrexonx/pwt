@@ -1,17 +1,17 @@
-import { PolymerElement, html } from '@polymer/polymer';
-import '../_widgets/data-table';
-import '../_widgets/page-header';
-import { fetchExternalFeeds } from './services';
-import '@polymer/iron-ajax/iron-ajax';
+import { PolymerElement, html } from "@polymer/polymer";
+import "../_widgets/data-table";
+import "../_widgets/page-header";
+import { fetchExternalFeeds } from "./services";
+import "@polymer/iron-ajax/iron-ajax";
 
 export class ExternalFeeds extends PolymerElement {
   ready() {
     super.ready();
-    this.set('items', fetchExternalFeeds());
+    this.set("items", fetchExternalFeeds());
   }
 
   static get is() {
-    return 'external-feeds';
+    return "external-feeds";
   }
 
   static get template() {
@@ -27,12 +27,6 @@ export class ExternalFeeds extends PolymerElement {
       </style>
       <section>
         <page-header title="TMS Stations" icon="add"></page-header>
-        <!--        <iron-ajax-->
-        <!--          url="https://reqres.in/api/users"-->
-        <!--          last-response="{{rawItems}}"-->
-        <!--          auto=""-->
-        <!--        >-->
-        <!--        </iron-ajax>-->
         <data-table raw-items="[[items]]"></data-table>
       </section>
     `;

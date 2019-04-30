@@ -4,21 +4,21 @@ import {
   css,
   TemplateResult,
   property,
-  customElement
-} from 'lit-element';
-import '@polymer/app-layout/app-drawer/app-drawer';
-import '@polymer/app-layout/app-toolbar/app-toolbar';
-import '@polymer/iron-selector/iron-selector';
-import '@polymer/paper-checkbox/paper-checkbox';
-import '../_widgets/nav-links';
-import { LTM_PAGES } from './constants';
+  customElement,
+} from "lit-element";
+import "@polymer/app-layout/app-drawer/app-drawer";
+import "@polymer/app-layout/app-toolbar/app-toolbar";
+import "@polymer/iron-selector/iron-selector";
+import "@polymer/paper-checkbox/paper-checkbox";
+import "../_widgets/nav-links";
+import { LTM_PAGES } from "./constants";
 
-@customElement('side-nav')
+@customElement("side-nav")
 class SideNav extends LitElement {
   @property() user: string;
 
   static get is() {
-    return 'side-nav';
+    return "side-nav";
   }
 
   static get styles() {
@@ -51,7 +51,7 @@ class SideNav extends LitElement {
             (item: string) =>
               html`
                 <nav-links name="${item}"></nav-links>
-              `
+              `,
           )}
         </iron-selector>
       </section>

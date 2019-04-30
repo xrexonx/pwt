@@ -1,14 +1,14 @@
-import { PolymerElement, html } from '@polymer/polymer/polymer-element';
-import '@polymer/iron-list/iron-list';
-import '@polymer/paper-card/paper-card';
-import '@polymer/paper-button/paper-button';
-import '@polymer/paper-dialog/paper-dialog';
-import '@polymer/paper-radio-button/paper-radio-button';
-import '@polymer/paper-radio-group/paper-radio-group';
+import { PolymerElement, html } from "@polymer/polymer/polymer-element";
+import "@polymer/iron-list/iron-list";
+import "@polymer/paper-card/paper-card";
+import "@polymer/paper-button/paper-button";
+import "@polymer/paper-dialog/paper-dialog";
+import "@polymer/paper-radio-button/paper-radio-button";
+import "@polymer/paper-radio-group/paper-radio-group";
 
-import styles from './styles.scss';
+import styles from "./styles.scss";
 // import { databaseModal } from './modal';
-import { fetchDatabases } from './services';
+import { fetchDatabases } from "./services";
 
 export class DatabasesPage extends PolymerElement {
   $: any;
@@ -17,8 +17,8 @@ export class DatabasesPage extends PolymerElement {
   ready() {
     super.ready();
     const databases = fetchDatabases();
-    this.set('databases', databases);
-    this.set('currentDB', 'Staging');
+    this.set("databases", databases);
+    this.set("currentDB", "Staging");
   }
 
   openDialog() {
@@ -30,7 +30,7 @@ export class DatabasesPage extends PolymerElement {
   }
 
   static get is() {
-    return 'databases-page';
+    return "databases-page";
   }
 
   static get properties() {
@@ -39,8 +39,8 @@ export class DatabasesPage extends PolymerElement {
       currentDB: String,
       selectedDB: {
         type: String,
-        value: 'staging'
-      }
+        value: "staging",
+      },
     };
   }
 
@@ -95,7 +95,7 @@ export class DatabasesPage extends PolymerElement {
           </div>
         </paper-dialog>
       </section>
-    `
+    `,
     ]);
   }
 }

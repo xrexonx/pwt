@@ -1,9 +1,9 @@
 {
   "extends": [
-    "tslint:latest",
-    "tslint-eslint-rules",
+    "tslint-config-prettier",
     "tslint-config-airbnb",
-    "tslint-config-prettier"
+    "tslint-eslint-rules",
+    "tslint:latest"
   ],
   "rules": {
     "array-type": [
@@ -122,6 +122,7 @@
       true,
       "never"
     ],
-    "no-this-assignment": false
+    "no-this-assignment": false,
+    "trailing-comma": false
   }
 }

@@ -4,10 +4,10 @@ import {
   css,
   property,
   customElement,
-  TemplateResult
-} from 'lit-element';
+  TemplateResult,
+} from "lit-element";
 
-@customElement('page-header')
+@customElement("page-header")
 export class PageHeader extends LitElement {
   @property() icon: string;
   @property() title: string;
@@ -30,7 +30,7 @@ export class PageHeader extends LitElement {
       <app-header slot="header" reveals effects="waterfall">
         <app-toolbar>
           <div main-title>${this.title}</div>
-          <paper-icon-button icon="${this.icon || ''}"></paper-icon-button>
+          <paper-icon-button icon="${this.icon || ""}"></paper-icon-button>
         </app-toolbar>
       </app-header>
     `;

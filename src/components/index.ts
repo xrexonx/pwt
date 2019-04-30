@@ -1,9 +1,9 @@
 import {
   setRootPath,
-  setPassiveTouchGestures
-} from '@polymer/polymer/lib/utils/settings';
+  setPassiveTouchGestures,
+} from "@polymer/polymer/lib/utils/settings";
 // import { MyApp } from './shell/shell.component';
-import { AppShell } from './shell/app-shell';
+import { AppShell } from "./shell/app-shell";
 
 declare var window: any;
 
@@ -13,7 +13,7 @@ setRootPath(window.Polymer.rootPath);
 setPassiveTouchGestures(true);
 
 const elements: any = [
-  AppShell
+  AppShell,
   // Add your STATIC elements here
 ];
 

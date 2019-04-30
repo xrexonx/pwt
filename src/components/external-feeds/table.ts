@@ -1,24 +1,24 @@
-import { PolymerElement, html } from '@polymer/polymer/polymer-element';
+import { PolymerElement, html } from "@polymer/polymer/polymer-element";
 
-import '@polymer/paper-icon-button';
-import '@exmg/exmg-paper-tooltip/exmg-paper-tooltip';
-import '../_widgets/_data-tables/exmg-paper-thead';
-import '../_widgets/_data-tables/exmg-paper-tbody';
+import "@polymer/paper-icon-button";
+import "@exmg/exmg-paper-tooltip/exmg-paper-tooltip";
+import "../_widgets/_data-tables/exmg-paper-thead";
+import "../_widgets/_data-tables/exmg-paper-tbody";
 
 class TableList extends PolymerElement {
   static get properties() {
     return {
       sorted: {
         type: String,
-        value: 'name'
+        value: "name",
       },
       sortDirection: {
         type: String,
-        value: 'ASC'
+        value: "ASC",
       },
       items: {
-        type: Array
-      }
+        type: Array,
+      },
     };
   }
 
@@ -79,4 +79,4 @@ class TableList extends PolymerElement {
   }
 }
 
-customElements.define('table-list', TableList);
+customElements.define("table-list", TableList);

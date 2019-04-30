@@ -1,14 +1,14 @@
-import { html, PolymerElement } from '@polymer/polymer/polymer-element';
-import '../../icons';
-import '../../shared-styles';
-import style from './subview2.style.scss';
-import view from './subview2.template.html';
+import { html, PolymerElement } from "@polymer/polymer/polymer-element";
+import "../../icons";
+import "../../shared-styles";
+import style from "./subview2.style.scss";
+import view from "./subview2.template.html";
 
 export class MySubview2 extends PolymerElement {
   $: any;
 
   static get is() {
-    return 'my-subview2';
+    return "my-subview2";
   }
 
   static get template() {

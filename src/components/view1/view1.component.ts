@@ -1,8 +1,8 @@
-import { html, PolymerElement } from '@polymer/polymer/polymer-element';
+import { html, PolymerElement } from "@polymer/polymer/polymer-element";
 
-import '../shared-styles';
-import style from './view1.style.scss';
-import view from './view1.template.html';
+import "../shared-styles";
+import style from "./view1.style.scss";
+import view from "./view1.template.html";
 // import '../login/LoginPage';
 
 export class MyView1 extends PolymerElement {
@@ -13,4 +13,4 @@ export class MyView1 extends PolymerElement {
   }
 }
 
-window.customElements.define('my-view1', MyView1);
+window.customElements.define("my-view1", MyView1);

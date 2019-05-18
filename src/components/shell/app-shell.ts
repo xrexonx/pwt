@@ -1,31 +1,12 @@
-import { html, property, LitElement, TemplateResult } from "lit-element";
-
+import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
 import "../main/index";
-// import '../login/login';
 
-export class AppShell extends LitElement {
-  @property() authenticated: boolean;
-
+export class AppShell extends PolymerElement {
   static get is() {
     return "app-shell";
   }
 
-  render(): TemplateResult {
-    // const { authenticated } = this;
-    // console.log('authenticated', this.authenticated);
-
-    // import(
-    //   !this.authenticated
-    //     ? '../main/index'
-    //     : '../login/login'
-    //   );
-
-    return html`
-      <main-page></main-page>
-    `;
-
-    // return !this.authenticated
-    //   ? html`<main-page></main-page>`
-    //   : html`<login-page></login-page>`;
+  static get template() {
+    return html`<main-page></main-page>`;
   }
 }

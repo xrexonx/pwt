@@ -8,10 +8,10 @@
 >
 </app-route>
 
-<app-drawer-layout fullbleed narrow="{{narrow}}">
+<app-drawer-layout fullbleed id="drawerLayout">
   <!-- Drawer content -->
-  <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
-    <app-toolbar>Menu</app-toolbar>
+  <app-drawer id="drawer" slot="drawer">
+    <app-toolbar class="side-menu">Menu</app-toolbar>
     <iron-selector
       selected="[[page]]"
       attr-for-selected="name"
@@ -22,22 +22,6 @@
       <a name="view2" href="[[rootPath]]view2">View Two</a>
       <a name="view3" href="[[rootPath]]view3">View Three</a>
     </iron-selector>
-    <!--<hr>-->
-    <!--<section>-->
-    <!--<h2>Navigation</h2>-->
-    <!--<paper-checkbox checked="{{condenses}}">-->
-    <!--condenses-->
-    <!--</paper-checkbox>-->
-    <!--<paper-checkbox checked="{{fixed}}">-->
-    <!--fixed-->
-    <!--</paper-checkbox>-->
-    <!--<paper-checkbox checked="{{reveals}}">-->
-    <!--reveals-->
-    <!--</paper-checkbox>-->
-    <!--<paper-checkbox checked="{{shadow}}">-->
-    <!--shadow-->
-    <!--</paper-checkbox>-->
-    <!--</section>-->
   </app-drawer>
 
   <!-- Main content -->
@@ -47,8 +31,9 @@
         <paper-icon-button
           icon="my-icons:menu"
           drawer-toggle
+          on-tap="toggleDrawer"
         ></paper-icon-button>
-        <div main-title>My App</div>
+        <!-- <div main-title>My App</div> -->
       </app-toolbar>
     </app-header>
 

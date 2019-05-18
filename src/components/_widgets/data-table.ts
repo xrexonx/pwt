@@ -1,4 +1,4 @@
-import { PolymerElement, html } from "@polymer/polymer/polymer-element";
+import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
 import "@polymer/iron-flex-layout/iron-flex-layout";
 import "@polymer/paper-button/paper-button";
 import "@polymer/paper-icon-button/paper-icon-button";
@@ -16,6 +16,7 @@ import ".//_data-tables/exmg-paper-data-filter.js";
 import ".//_data-tables/exmg-paper-icons.js";
 
 class DataTable extends PolymerElement {
+  placeHolder: any;
   static get properties() {
     return {
       pageIndex: {

@@ -71,4 +71,14 @@ export class MyApp extends PolymerElement {
   showPage404() {
     this.page = "view404";
   }
+
+  toggleDrawer() {
+    if (this.$.drawerLayout.forceNarrow || !this.$.drawerLayout.narrow) {
+      console.log('naroow');
+      this.$.drawerLayout.forceNarrow = !this.$.drawerLayout.forceNarrow;
+    } else {
+      console.log('naroww');
+      this.$.drawerLayout.drawer.toggle();
+    }
+  }
 }

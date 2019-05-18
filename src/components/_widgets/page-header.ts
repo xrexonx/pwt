@@ -1,38 +1,37 @@
-import {
-  LitElement,
-  html,
-  css,
-  property,
-  customElement,
-  TemplateResult,
-} from "lit-element";
+import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
 
-@customElement("page-header")
-export class PageHeader extends LitElement {
-  @property() icon: string;
-  @property() title: string;
+class PageHeader extends PolymerElement {
 
-  static get styles() {
-    return css`
-      app-header {
-        color: #fff;
-        background-color: #0568ae;
-      }
-      app-toolbar {
-        height: 50px;
-        font-size: 16px;
-      }
-    `;
+  static get is() {
+    return "page-header";
   }
-
-  render(): TemplateResult {
+  static get properties() {
+    return {
+      title: String,
+      icon: String,
+      iconClick: String
+    };
+  }
+  static get template() {
     return html`
+      <style>
+        app-header {
+          color: #fff;
+          background-color: #0568ae;
+        }
+        app-toolbar {
+          height: 50px;
+          font-size: 16px;
+        }
+      </style>
       <app-header slot="header" reveals effects="waterfall">
         <app-toolbar>
-          <div main-title>${this.title}</div>
-          <paper-icon-button icon="${this.icon || ""}"></paper-icon-button>
+          <div main-title>[[title]]</div>
+          <paper-icon-button icon="[[icon]]"></paper-icon-button>
         </app-toolbar>
       </app-header>
     `;
   }
 }
+
+customElements.define(PageHeader.is, PageHeader);

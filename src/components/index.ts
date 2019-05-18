@@ -2,7 +2,7 @@ import {
   setRootPath,
   setPassiveTouchGestures,
 } from "@polymer/polymer/lib/utils/settings";
-// import { MyApp } from './shell/shell.component';
+// import { MyApp } from "./shell/shell.component";
 import { AppShell } from "./shell/app-shell";
 
 declare var window: any;

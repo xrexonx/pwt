@@ -4,14 +4,20 @@ import "@polymer/paper-button/paper-button";
 import "../_widgets/page-header";
 import "@polymer/paper-tabs/paper-tabs";
 import "@polymer/paper-tabs/paper-tab";
+import "@polymer/iron-collapse/iron-collapse";
 // import {getPageUrl} from "../../_utils/string";
 
 class DashboardPage extends PolymerElement {
+  $: any;
   tabChanged(tab: string) {
     // console.log('tab', tab);
     // if (tab !== 'ltm') {
     //   import(getPageUrl(tab));
     // }
+  }
+
+  toggleCollapse(e: any) {
+    this.$.collapse.toggle();
   }
 
   static get properties() {
@@ -52,6 +58,23 @@ class DashboardPage extends PolymerElement {
           attr-for-selected="name"
         >
         </iron-pages>
+
+        <section>
+          <paper-button on-tap="toggleCollapse">
+            <span>Collapse #1</span>
+            <iron-icon icon="expand-more"></iron-icon>
+          </paper-button>
+          <iron-collapse id="collapse">
+            <div class="content">
+              Lorem ipsum dolor sit amet, per in nusquam nominavi periculis
+              sit elit oportere ea, id minim maiestatis incorrupte duo
+              Dolorum verterem ad ius, his et nullam verterem. Eu al
+              ia debet usu, an doming tritani est. Vix ad po
+              nderum petentium suavitate, eum eu tempor populo,
+              graece sententiae constituam vim ex. Cu torquatos
+            </div>
+          </iron-collapse>
+        </section>
       </section>
     `;
   }

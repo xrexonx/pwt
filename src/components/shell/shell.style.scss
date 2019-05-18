@@ -1,28 +1,21 @@
 :host {
   --app-primary-color: #4285f4;
   --app-secondary-color: black;
+  //--app-drawer-width: 75px;
 
   display: block;
 }
 
-app-drawer-layout:not([narrow]) [drawer-toggle] {
-  display: none;
+.side-menu {
+  border: 2px solid #eeeeee;
 }
 
-//app-drawer section {
-//  height: 100%;
-//  overflow-y: auto;
-//  -webkit-overflow-scrolling: touch;
-//}
-//app-drawer h2 {
-//  margin: 8px 0 0;
-//  padding: 18px;
-//  font-size: 18px;
-//}
-//app-drawer paper-checkbox {
-//  display: block;
-//  padding: 18px;
-//}
+app-drawer {
+  --app-drawer-content-container: {
+    box-shadow: 1px 0 2px 1px rgba(0,0,0,0.18);
+  }
+  --app-drawer-scrim-background: rgba(179, 157, 219, 0.5);
+}
 
 app-header {
   color: #fff;

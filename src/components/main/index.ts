@@ -11,8 +11,6 @@ import "@polymer/iron-pages/iron-pages";
 import "@polymer/iron-selector/iron-selector";
 import "@polymer/iron-flex-layout/iron-flex-layout";
 import "@polymer/paper-icon-button/paper-icon-button";
-import "@ovp/dfw-styles/dfw-styles";
-import "@ovp/dfw-styles/dfw-custom-icons";
 import { html, PolymerElement } from "@polymer/polymer/polymer-element";
 
 import "./main";
@@ -59,6 +57,14 @@ export class MainPage extends PolymerElement {
     this.page = "view404";
   }
 
+  toggleDrawer() {
+    if (this.$.drawerLayout.forceNarrow || !this.$.drawerLayout.narrow) {
+      this.$.drawerLayout.forceNarrow = !this.$.drawerLayout.forceNarrow;
+    } else {
+      this.$.drawerLayout.drawer.toggle();
+    }
+  }
+
   static get template() {
     return html([
       `
@@ -70,16 +76,22 @@ export class MainPage extends PolymerElement {
         data="{{routeData}}"
         tail="{{subroute}}"
       ></app-route>
-      <app-drawer-layout>
-        <app-drawer slot="drawer">
-          <side-nav user="Rexona" page="{{page}}" route="{{route}}"></side-nav>
+      <app-drawer-layout id="drawerLayout">
+        <app-drawer slot="drawer" id="drawer">
+          <side-nav user="OV" page="{{page}}" route="{{route}}"></side-nav>
         </app-drawer>
         <app-header-layout>
           <app-header slot="header" effects="waterfall" reveals fixed>
             <app-toolbar>
-              <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-              <div main-title>Lil Table Manager</div>
-              <iron-icon class="dfw-16" icon="dfw:date-time"></iron-icon>
+              <paper-icon-button
+              icon="menu"
+              drawer-toggle
+              on-tap="toggleDrawer"
+              ></paper-icon-button>
+              <div main-title></div>
+              <paper-icon-button
+              icon="shopping-cart" spacer></paper-icon-button>
+              <paper-icon-button icon="settings"></paper-icon-button>
             </app-toolbar>
           </app-header>
           <iron-pages

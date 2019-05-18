@@ -5,7 +5,7 @@ import "../_widgets/page-header";
 import { loginSubmit } from "./services";
 import styles from "./styles.scss";
 
-import "@ovp/dfw-login/dfw-login";
+// import "@ovp/dfw-login/dfw-login";
 
 export class LoginPage extends PolymerElement {
   username: string;
@@ -81,10 +81,6 @@ export class LoginPage extends PolymerElement {
             >
           </div>
         </div>
-<!--        <dfw-login-->
-<!--          id="dfw-login"-->
-<!--          user-name="{{userName}}">-->
-<!--        </dfw-login>-->
         <iron-ajax
           id="postLogin"
           method="post"

@@ -13,12 +13,10 @@
   "dependencies": {
     "@exmg/exmg-paper-datatable": "^3.0.5",
     "@exmg/exmg-paper-tooltip": "^3.0.0",
-    "@ovp/dfw-audit": "http://developer-ui.ds.dtveng.net/poly3/dfw-audit.tar.gz",
-    "@ovp/dfw-login": "http://developer-ui.ds.dtveng.net/poly3/dfw-login.tar.gz",
-    "@ovp/dfw-styles": "http://developer-ui.ds.dtveng.net/poly3/dfw-styles.tar.gz",
     "@polymer/app-layout": "^3.0.2",
     "@polymer/app-route": "^3.0.2",
     "@polymer/iron-ajax": "^3.0.1",
+    "@polymer/iron-collapse": "^3.0.1",
     "@polymer/iron-flex-layout": "^3.0.1",
     "@polymer/iron-icon": "^3.0.1",
     "@polymer/iron-icons": "^3.0.1",
@@ -39,8 +37,7 @@
     "@polymer/polymer": "^3.1.0",
     "@webcomponents/webcomponentsjs": "^2.2.1",
     "dotenv": "^7.0.0",
-    "koa-compress": "^3.0.0",
-    "lit-element": "^2.1.0"
+    "koa-compress": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

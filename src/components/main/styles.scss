@@ -9,7 +9,11 @@ app-header-layout {
   paper-icon-button {
     --paper-icon-button-ink-color: white;
   }
-  app-drawer-layout:not([narrow]) [drawer-toggle] {
-    display: none;
+
+  app-drawer {
+    --app-drawer-content-container: {
+      box-shadow: 1px 0 2px 1px rgba(0,0,0,0.18);
+    }
+    --app-drawer-scrim-background: rgba(179, 157, 219, 0.5);
   }
 }

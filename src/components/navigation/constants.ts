@@ -3,11 +3,16 @@ export const LTM_PAGES: string[] = [
   "geography",
   "databases",
   "external_feeds",
-  // 'customer_care',
-  // 'customer_care2',
   "current_lil_database",
-  // 'geography',
   "login",
+];
+
+export const NAVS: object[] = [
+  { name: "navigation", icon: "view-module" },
+  { name: "geography", icon: "language" },
+  { name: "databases", icon: "credit-card" },
+  { name: "external_feeds", icon: "list" },
+  { name: "current_lil_database", icon: "dns" },
 ];
 
 export const SIDE_NAV_LINKS: any = {

@@ -12,12 +12,22 @@ class NavLinks extends PolymerElement {
   static get navStyles() {
     return html`
       <style>
+        :host {
+          --app-primary-color: #4285f4;
+          --app-secondary-color: #6c8a99;
+          display: block;
+        }
         h2 {
           padding: 8px;
           margin: 8px 0 0;
-          color: #222222;
-          font-size: 16px;
+          color: #37474f;
+          font-size: 14px;
           text-transform: capitalize;
+          cursor: pointer;
+          /*line-height: 48px;*/
+        }
+        h2:hover {
+          background: #f5f5f5;
         }
         .link {
           display: block;
@@ -31,7 +41,8 @@ class NavLinks extends PolymerElement {
           border-left: 4px solid #0568ae;
         }
         .side-nav {
-          margin: 0 8px 8px 8px;
+          /*margin: 0 8px 8px 8px;*/
+          margin-left: 8px;
         }
         .active-link {
           border-left: 4px solid #0568ae;
@@ -47,6 +58,7 @@ class NavLinks extends PolymerElement {
   static get properties() {
     return {
       linkName: String,
+      icon: String,
       name: {
         type: String,
         computed: "titleizePageName(linkName)"
@@ -74,22 +86,21 @@ class NavLinks extends PolymerElement {
     return html`
       ${this.navStyles}
       <div class="side-nav">
-        <h2>
-          <paper-button on-tap="toggleCollapse">
+        <h2 on-tap="toggleCollapse">
+          <iron-icon icon="[[icon]]"></iron-icon>
             <span>[[name]]</span>
             <!--<iron-icon icon="expand-more"></iron-icon>-->
-          </paper-button>
         </h2>
         <iron-collapse id="collapse">
            <div class="content">
-              <template is="dom-repeat" items="{{pages}}">
+              <template is="dom-repeat" items="{{pages}}" as="page">
                 <a
                   class="link"
-                  href="[[item.routeName]]"
-                  name="[[item.routeName]]"
+                  href="[[page.routeName]]"
+                  name="[[page.routeName]]"
                 >
-                  <iron-icon icon="[[item.icon]]"></iron-icon>
-                  [[item.title]]
+                  <iron-icon icon="chevron-right"></iron-icon>
+                  [[page.title]]
                 </a>
               </template>
              </div>

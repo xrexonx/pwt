@@ -3,7 +3,7 @@ import "@polymer/app-layout/app-drawer/app-drawer.js";
 import "@polymer/app-layout/app-toolbar/app-toolbar.js";
 import "@polymer/iron-selector/iron-selector.js";
 import "@polymer/paper-checkbox/paper-checkbox.js";
-import { LTM_PAGES } from "./constants";
+import { NAVS } from "./constants";
 import "../_widgets/nav-links";
 
 class SideNav extends PolymerElement {
@@ -13,7 +13,7 @@ class SideNav extends PolymerElement {
       page: { type: String },
       pages: {
         type: Array,
-        value: LTM_PAGES
+        value: NAVS
       }
     };
   }
@@ -26,8 +26,8 @@ class SideNav extends PolymerElement {
     return html`
       <style>
         app-toolbar {
-          color: #000;
-          border: 3px solid #eee;
+          color: #37474f;
+          border: 2px solid #eee;
         }
         section {
           height: 100vh;
@@ -43,8 +43,8 @@ class SideNav extends PolymerElement {
           attr-for-selected="name"
           role="navigation"
         >
-        <template is="dom-repeat" items="{{pages}}">
-          <nav-links link-name="{{item}}"></nav-links>
+        <template is="dom-repeat" items="[[pages]]">
+          <nav-links icon="[[item.icon]]" link-name="[[item.name]]"></nav-links>
         </template>
         </iron-selector>
       </section>

@@ -27,11 +27,12 @@ class SideNav extends PolymerElement {
       <style>
         app-toolbar {
           color: #37474f;
-          border: 2px solid #eee;
+          /*border-bottom: 2px solid #eee;*/
         }
         section {
           height: 100vh;
           overflow-y: auto;
+          border-top: 2px solid #eee;
         }
       </style>
       <app-toolbar reveals fixed>

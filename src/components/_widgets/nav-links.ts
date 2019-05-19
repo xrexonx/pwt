@@ -4,6 +4,7 @@ import "@polymer/iron-icon/iron-icon.js";
 import "@polymer/iron-icons/iron-icons.js";
 import "@polymer/paper-tabs/paper-tab";
 import "@polymer/iron-collapse/iron-collapse";
+import "@polymer/paper-item/paper-item";
 import { titleize } from "../_utils/string";
 import { SIDE_NAV_LINKS } from "../navigation/constants";
 
@@ -85,10 +86,22 @@ class NavLinks extends PolymerElement {
   static get template() {
     return html`
       ${this.navStyles}
-      <div class="side-nav">
+      <div class="side-nav" role="listbox">
         <h2 on-tap="toggleCollapse">
-          <iron-icon icon="[[icon]]"></iron-icon>
-            <span>[[name]]</span>
+            <paper-icon-item>
+              <iron-icon icon="[[icon]]" slot="item-icon"></iron-icon>
+              [[name]]
+            </paper-icon-item>
+            <!--<paper-icon-item>-->
+              <!--<iron-icon icon="[[icon]]" slot="item-icon"></iron-icon>-->
+              <!--<paper-item-body>-->
+                <!--<div>[[name]]</div>-->
+                <!--<div secondary>Jan 9, 2014</div>-->
+              <!--</paper-item-body>-->
+              <!--<paper-icon-button-->
+              <!--align="right" icon="chevron-right" alt="favourite this!">-->
+              <!--</paper-icon-button>-->
+            <!--</paper-icon-item>-->
             <!--<iron-icon icon="expand-more"></iron-icon>-->
         </h2>
         <iron-collapse id="collapse">

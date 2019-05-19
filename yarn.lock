@@ -1056,7 +1056,7 @@
     "@polymer/paper-styles" "^3.0.0-pre.26"
     "@polymer/polymer" "^3.0.0"
 
-"@polymer/paper-item@^3.0.0-pre.25":
+"@polymer/paper-item@^3.0.0-pre.25", "@polymer/paper-item@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@polymer/paper-item/-/paper-item-3.0.1.tgz#05b3543483e556cd5532431cd1751a84343989b5"
   integrity sha512-KTk2N+GsYiI/HuubL3sxebZ6tteQbBOAp4QVLAnbjSPmwl+mJSDWk+omuadesU0bpkCwaWVs3fHuQsmXxy4pkw==

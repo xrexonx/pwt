@@ -78,7 +78,11 @@ export class MainPage extends PolymerElement {
       ></app-route>
       <app-drawer-layout id="drawerLayout">
         <app-drawer slot="drawer" id="drawer">
-          <side-nav user="OV" page="{{page}}" route="{{route}}"></side-nav>
+          <side-nav
+            user="OV Market Manager"
+            page="{{page}}"
+            route="{{route}}"
+          ></side-nav>
         </app-drawer>
         <app-header-layout>
           <app-header slot="header" effects="waterfall" reveals fixed>
@@ -102,8 +106,8 @@ export class MainPage extends PolymerElement {
             fallback-selection="error404"
           >
             <dashboard-page name="ltm"></dashboard-page>
-            <sample-content name="preferences" size="1"></sample-content>
-            <sample-content name="guides" size="1"></sample-content>
+            <sample-content name="preferences" size="2"></sample-content>
+            <sample-content name="guides" size="2"></sample-content>
             <databases-page name="databases"></databases-page>
             <external-feeds name="external_feeds"></external-feeds>
             <login-page name="login"></login-page>

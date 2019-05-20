@@ -5,6 +5,12 @@ section {
   margin: 8px 10px 8px 10px;
   background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border-top: 3px solid #0568ae;
+
+  app-header {
+    color: #ffffff;
+    background-color: #0568ae;
+  }
 
   div.data-list {
     padding: 10px;

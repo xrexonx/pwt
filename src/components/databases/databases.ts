@@ -48,16 +48,16 @@ export class DatabasesPage extends PolymerElement {
     return html([
       `
       <style>${styles}</style>
+      <app-header slot="header" reveals effects="waterfall">
+        <app-toolbar>
+          <div main-title>IT LILN [[currentDB]] Database</div>
+          <paper-icon-button
+            icon="create"
+            on-click="openDialog"
+          ></paper-icon-button>
+        </app-toolbar>
+      </app-header>
       <section>
-        <app-header slot="header" reveals effects="waterfall">
-          <app-toolbar>
-            <div main-title>IT LILN [[currentDB]] Database</div>
-            <paper-icon-button
-              icon="create"
-              on-click="openDialog"
-            ></paper-icon-button>
-          </app-toolbar>
-        </app-header>
         <div class="data-list">
           <template is="dom-repeat" items="[[databases]]">
             <paper-card heading="[[item.definition]]">

@@ -1,4 +1,4 @@
-import { PolymerElement, html } from "@polymer/polymer";
+import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
 import "../_widgets/data-table";
 import "../_widgets/page-header";
 import { fetchExternalFeeds } from "./services";
@@ -23,10 +23,11 @@ export class ExternalFeeds extends PolymerElement {
           background-color: #ffffff;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
           overflow-x: hidden;
+          border-top: 3px solid #0568ae;
         }
       </style>
+      <page-header title="TMS Stations" icon="add"></page-header>
       <section>
-        <page-header title="TMS Stations" icon="add"></page-header>
         <data-table raw-items="[[items]]"></data-table>
       </section>
     `;

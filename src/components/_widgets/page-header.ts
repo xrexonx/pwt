@@ -1,4 +1,6 @@
 import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
+import "@polymer/paper-icon-button/paper-icon-button.js";
+import "@polymer/iron-icons/iron-icons.js";
 
 class PageHeader extends PolymerElement {
 
@@ -16,8 +18,8 @@ class PageHeader extends PolymerElement {
     return html`
       <style>
         app-header {
-          color: #fff;
-          background-color: #0568ae;
+          color: #222;
+          /*background-color: #0568ae;*/
         }
         app-toolbar {
           height: 50px;
@@ -27,7 +29,7 @@ class PageHeader extends PolymerElement {
       <app-header slot="header" reveals effects="waterfall">
         <app-toolbar>
           <div main-title>[[title]]</div>
-          <paper-icon-button icon="[[icon]]"></paper-icon-button>
+          <slot name="actions"></slot>
         </app-toolbar>
       </app-header>
     `;

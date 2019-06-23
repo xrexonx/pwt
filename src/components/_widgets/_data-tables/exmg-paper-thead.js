@@ -146,7 +146,7 @@ export class ExmgPaperTheadElement extends mixinBehaviors([Templatizer], Gesture
           .th[sortable]::after {
             display: block;
             content: "";
-            background-image: url('/arrow-downward.svg');
+            background-image: url('/src/static/images/arrow-downward.svg');
             background-size: 12px 12px;
             height: 12px;
             width: 12px;

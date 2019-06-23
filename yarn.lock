@@ -1153,6 +1153,14 @@
     "@polymer/iron-overlay-behavior" "^3.0.0-pre.27"
     "@polymer/polymer" "^3.0.0"
 
+"@polymer/paper-tooltip@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@polymer/paper-tooltip/-/paper-tooltip-3.0.1.tgz#cdbb06442737513f081437c6302842170ce714dc"
+  integrity sha512-yiUk09opTEnE1lK+tb501ENb+yQBi4p++Ep0eGJAHesVYKVMPNgPphVKkIizkDaU+n0SE+zXfTsRbYyOMDYXSg==
+  dependencies:
+    "@polymer/paper-styles" "^3.0.0-pre.26"
+    "@polymer/polymer" "^3.0.0"
+
 "@polymer/polymer@^3.0.0", "@polymer/polymer@^3.0.0-pre.13", "@polymer/polymer@^3.0.5", "@polymer/polymer@^3.1.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-3.2.0.tgz#b41fddec4ecac63b12936b93726678d23add7afd"

@@ -67,10 +67,10 @@ class DataTable extends PolymerElement {
   }
   showSearch() {
     this.set("isSearch", true);
-    setTimeout(
-      () => this.shadowRoot.querySelector("#searchInput").focus(),
-      200,
-    );
+    // setTimeout(
+    //   () => this.shadowRoot.querySelector("#searchInput").focus(),
+    //   200,
+    // );
   }
   computeSearchClasses(isSearch: string) {
     return isSearch ? "search" : "";
@@ -94,7 +94,7 @@ class DataTable extends PolymerElement {
           font-size: 14px;
           margin: 0px 4px;
           padding: 4px;
-          border: 0px solid var(--divider-color);
+          /*border: 0px solid var(--divider-color);*/
           width: 100%;
         }
         exmg-paper-toolbar span.interactive-content {

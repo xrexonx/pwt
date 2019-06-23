@@ -111,6 +111,7 @@ export class MainPage extends PolymerElement {
             <databases-page name="databases"></databases-page>
             <external-feeds name="external_feeds"></external-feeds>
             <login-page name="login"></login-page>
+            <states-page name="states"></states-page>
           </iron-pages>
         </app-header-layout>
       </app-drawer-layout>

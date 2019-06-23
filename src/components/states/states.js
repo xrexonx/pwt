@@ -2,17 +2,14 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../_widgets/page-header';
 import { fetchStates } from './services';
 import './state-list';
+import '@polymer/paper-input/paper-input.js';
+import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
+import { sampleForm } from "./form";
 
 class States extends PolymerElement {
   async ready() {
     super.ready();
-    const states = await fetchStates();
-    console.log({states});
-    this.set('states', states);
-  }
-
-  openDialog() {
-    this.$.statesModal.open();
+    this.set('states', await fetchStates());
   }
 
   static get is() {
@@ -33,15 +30,26 @@ class States extends PolymerElement {
           border-radius: 50%;
           color: white;
         }
+        .form {
+         padding: 10px 50px 10px 50px;
+        }
+        .state-form {
+          display: grid;
+          grid-gap: 20px;
+        }
+        .fullwidth {
+          grid-column: span 2;
+        }
       </style>
       <page-header title="State List">
         <div slot="actions">
-          <paper-icon-button id="add-state" icon="add" title="Add States"></paper-icon-button>
           <paper-icon-button icon="icons:file-download" title="Export Excel"></paper-icon-button>
+          <paper-icon-button id="add-state" icon="add" title="Add States"></paper-icon-button>
         </div>
       </page-header>
       <section>
         <state-list raw-items="[[states]]" place-holder="Search states here"></state-list>
+        ${sampleForm}
       </section>
     `;
   }

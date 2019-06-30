@@ -1,16 +1,11 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../_widgets/page-header';
-import { fetchStates } from './services';
 import './state-list';
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
 import { sampleForm } from "./form";
 
 class States extends PolymerElement {
-  async ready() {
-    super.ready();
-    this.set('states', await fetchStates());
-  }
 
   static get is() {
     return 'states-page';
@@ -48,9 +43,10 @@ class States extends PolymerElement {
         </div>
       </page-header>
       <section>
-        <state-list raw-items="[[states]]" place-holder="Search states here"></state-list>
-        ${sampleForm}
+        <state-list></state-list>
       </section>
+      <page-header title="Form"></page-header>
+      <section>${sampleForm}</section>
     `;
   }
 }

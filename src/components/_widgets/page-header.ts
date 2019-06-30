@@ -19,14 +19,13 @@ class PageHeader extends PolymerElement {
       <style>
         app-header {
           color: #222;
-          /*background-color: #0568ae;*/
         }
         app-toolbar {
           height: 50px;
           font-size: 16px;
         }
       </style>
-      <app-header slot="header" reveals effects="waterfall">
+      <app-header slot="header" fixed>
         <app-toolbar>
           <div main-title>[[title]]</div>
           <slot name="actions"></slot>

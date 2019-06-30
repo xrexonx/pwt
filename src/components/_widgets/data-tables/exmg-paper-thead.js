@@ -79,6 +79,7 @@ export class ExmgPaperTheadElement extends mixinBehaviors(
           box-sizing: border-box;
           border-bottom: 1px solid var(--divider-color);
           @apply --exmg-paper-thead-tr;
+          height: 56px;
         }
 
         .th {
@@ -92,6 +93,7 @@ export class ExmgPaperTheadElement extends mixinBehaviors(
           padding: 0px 6px;
           position: relative;
           @apply --exmg-paper-thead-th;
+          height: 56px;
         }
 
         .th > span {

@@ -15,43 +15,57 @@ import '../_widgets/data-tables/exmg-paper-data-filter.js';
 import '../_widgets/data-tables/exmg-paper-icons.js';
 import { dataTableStyles } from '../_widgets/data-tables/data-table-style';
 import { dataTableDefaultProps } from '../_widgets/data-tables/data-table-props';
-import { toolbar} from '../_widgets/data-tables/data-table-toolbar';
 import { tableFooter } from '../_widgets/data-tables/data-table-footer';
+import { fetchStates } from "./services";
+
+const debounce = (fn, time) => {
+  let timeout;
+  return function() {
+    const functionCall = () => fn.apply(this, arguments);
+    clearTimeout(timeout);
+    timeout = setTimeout(functionCall, time);
+  }
+};
 
 class StateList extends PolymerElement {
-  static get properties() {
-    return dataTableDefaultProps;
+  async ready() {
+    super.ready();
+    this.set('rawItems', await fetchStates());
   }
 
-  _getFilterValue(filterValue) {
-    return filterValue || this.placeHolder;
+  static get properties() {
+    return {
+      stateName: String,
+      ...dataTableDefaultProps,
+    };
   }
-  _handleKeyUp(e) {
-    if (e.keyCode === 27) {
-      this._hideSearch();
-    }
+
+  observePageIndex() {
+    console.log('Observer pageIndex', this.pageIndex);
   }
-  _handleInputBlur() {
-    this._hideSearch();
+
+  observePageSize() {
+    console.log('Observer pageSize', this.pageSize);
   }
-  _hideSearch() {
-    this.set('isSearch', false);
+
+  observeSort() {
+    console.log('sorted', this.sorted);
+    console.log('sortDirection', this.sortDirection);
   }
-  _showSearch() {
-    this.set('isSearch', true);
-    setTimeout(
-      () => this.shadowRoot.querySelector('#searchInput').focus(),
-      200
-    );
-  }
-  _computeSearchClasses(isSearch) {
-    return isSearch ? 'search' : '';
+
+  debounceSearch(event) {
+      // ▼ ▲
+      console.log(event.target.id);
+      console.log(event.target.value);
+      this.set(event.target.id, event.target.value);
+      console.log('state', this.stateName);
+
+      debounce();
   }
 
   static get template() {
     return html`
       ${dataTableStyles}
-      ${toolbar}
       <!-- StateList -->
       <exmg-paper-datatable>
         <exmg-paper-thead
@@ -61,13 +75,28 @@ class StateList extends PolymerElement {
           <template>
             <div class="tr">
               <div class="th flex" sortable="name">
-                <span>Name</span>
+                <paper-input
+                  id="stateName"
+                  label="Name"
+                  on-keyup="debounceSearch"
+                  value="{{state.name}}">
+                </paper-input>
               </div>
               <div class="th flex" sortable="abbreviation">
-                <span>Abbreviation</span>
+                <paper-input
+                  id="abbreviation"
+                  label="Abbreviation"
+                  on-keyup="debounceSearch"
+                  value="{{state.name}}">
+                </paper-input>
               </div>
               <div class="th flex collapsable" sortable="usps">
-                <span>USPS Code</span>
+                <paper-input
+                  id="usps"
+                  label="USPS Code"
+                  on-keyup="debounceSearch"
+                  value="{{state.name}}">
+                </paper-input>
               </div>
               <div class="th flex-right flex-none" style="width: 120px"></div>
             </div>
@@ -89,10 +118,9 @@ class StateList extends PolymerElement {
               <div class="td flex-right flex-none hover" style="width: 120px">
                 <span>
                   <paper-icon-button
-                    icon="delete-forever"
                     on-tap="_stopTap"
+                    icon="delete-forever"
                   ></paper-icon-button>
-                  <!--<exmg-paper-tooltip>Remove</exmg-paper-tooltip>-->
                 </span>
               </div>
             </div>

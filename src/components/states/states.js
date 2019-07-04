@@ -31,7 +31,7 @@ class States extends PolymerElement {
           color: white;
         }
         .form {
-         padding: 10px 50px 10px 50px;
+         padding: 0 50px 0 50px;
         }
         .state-form {
           display: grid;
@@ -39,6 +39,9 @@ class States extends PolymerElement {
         }
         .fullwidth {
           grid-column: span 2;
+        }
+        .buttons {
+          margin-top: 5px;
         }
       </style>
       <page-header title="State List">
@@ -49,6 +52,15 @@ class States extends PolymerElement {
       </page-header>
       <section>
         <state-list raw-items="[[states]]" place-holder="Search states here"></state-list>
+      </section>
+
+      <page-header title="New County">
+        <div slot="actions">
+          <paper-icon-button icon="icons:save" title="Save County"></paper-icon-button>
+          <paper-icon-button id="add-state" icon="icons:chevron-left" title="Back"></paper-icon-button>
+        </div>
+      </page-header>
+      <section>
         ${sampleForm}
       </section>
     `;

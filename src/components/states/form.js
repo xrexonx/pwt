@@ -27,9 +27,7 @@ export const sampleForm = html`
                 <paper-item>00000</paper-item>
               </paper-listbox>
             </paper-dropdown-menu>
-            <paper-input label="Notes" class="fullwidth">
-              <iron-icon icon="icons:create" slot="prefix"></iron-icon>
-            </paper-input>
+            <paper-input label="Notes" class="fullwidth"></paper-input>
           </form>
         </iron-form>
       </div>

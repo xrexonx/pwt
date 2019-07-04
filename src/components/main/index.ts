@@ -93,8 +93,6 @@ export class MainPage extends PolymerElement {
               on-tap="toggleDrawer"
               ></paper-icon-button>
               <div main-title></div>
-              <paper-icon-button
-              icon="shopping-cart" spacer></paper-icon-button>
               <paper-icon-button icon="settings"></paper-icon-button>
             </app-toolbar>
           </app-header>

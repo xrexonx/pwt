@@ -3,7 +3,12 @@ import '@polymer/iron-flex-layout/iron-flex-layout.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/paper-input/paper-input.js';
-import '@polymer/paper-checkbox/paper-checkbox.js';
+
+import "@polymer/paper-checkbox/paper-checkbox.js";
+import "@polymer/iron-icon/iron-icon.js";
+import "@polymer/iron-icons/iron-icons.js";
+import "@polymer/iron-collapse/iron-collapse";
+import "@polymer/paper-item/paper-item";
 
 import '@exmg/exmg-paper-datatable/exmg-paper-datatable.js';
 import '../_widgets/data-tables/exmg-paper-toolbar.js';
@@ -48,8 +53,29 @@ class StateList extends PolymerElement {
     return isSearch ? 'search' : '';
   }
 
+  searchFilter(event) {
+    event.stopPropagation();
+    this.shadowRoot.querySelector('#toggleSearchFilter').toggle();
+  }
+
   static get template() {
     return html`
+      <style>
+        iron-collapse#toggleSearchFilter {
+          position: absolute;
+          right: 10px;
+          top: 40px;
+          background-color: white;
+          z-index: 1;
+          padding: 5px;
+          cursor: pointer;
+          border-radius: 5px;
+          border: 1px solid #F5F5F5;
+        }
+        iron-icon {
+            cursor: pointer;
+        }
+      </style>
       ${dataTableStyles}
       ${toolbar}
       <!-- StateList -->
@@ -89,10 +115,8 @@ class StateList extends PolymerElement {
               <div class="td flex-right flex-none hover" style="width: 120px">
                 <span>
                   <paper-icon-button
-                    icon="delete-forever"
-                    on-tap="_stopTap"
+                    icon="visibility"
                   ></paper-icon-button>
-                  <!--<exmg-paper-tooltip>Remove</exmg-paper-tooltip>-->
                 </span>
               </div>
             </div>

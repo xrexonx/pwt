@@ -92,17 +92,6 @@ class NavLinks extends PolymerElement {
               <iron-icon icon="[[icon]]" slot="item-icon"></iron-icon>
               [[name]]
             </paper-icon-item>
-            <!--<paper-icon-item>-->
-              <!--<iron-icon icon="[[icon]]" slot="item-icon"></iron-icon>-->
-              <!--<paper-item-body>-->
-                <!--<div>[[name]]</div>-->
-                <!--<div secondary>Jan 9, 2014</div>-->
-              <!--</paper-item-body>-->
-              <!--<paper-icon-button-->
-              <!--align="right" icon="chevron-right" alt="favourite this!">-->
-              <!--</paper-icon-button>-->
-            <!--</paper-icon-item>-->
-            <!--<iron-icon icon="expand-more"></iron-icon>-->
         </h2>
         <iron-collapse id="collapse">
            <div class="content">

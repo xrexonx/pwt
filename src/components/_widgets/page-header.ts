@@ -26,7 +26,7 @@ class PageHeader extends PolymerElement {
           font-size: 16px;
         }
       </style>
-      <app-header slot="header" reveals effects="waterfall">
+      <app-header slot="header" fixed>
         <app-toolbar>
           <div main-title>[[title]]</div>
           <slot name="actions"></slot>

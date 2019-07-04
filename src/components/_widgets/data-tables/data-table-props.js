@@ -18,5 +18,17 @@ export const dataTableDefaultProps = {
     type: String,
     value: 'ASC'
   },
+  filterValue: {
+    type: String,
+    value: ''
+  },
+  isSearch: {
+    type: Boolean,
+    value: false
+  },
+  placeHolder: {
+    type: String,
+    value: 'Search state here'
+  },
   rawItems: { type: Array }
 };

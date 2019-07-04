@@ -75,6 +75,7 @@ class StateList extends PolymerElement {
         iron-icon {
             cursor: pointer;
         }
+        
       </style>
       ${dataTableStyles}
       ${toolbar}

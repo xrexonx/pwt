@@ -43,11 +43,17 @@ class States extends PolymerElement {
         .buttons {
           margin-top: 5px;
         }
+        .blue {
+            background-color: #0568ae;
+            color: white;
+            border-radius: 50%;
+        }
       </style>
       <page-header title="State List">
         <div slot="actions">
-          <paper-icon-button icon="icons:file-download" title="Export Excel"></paper-icon-button>
+          <paper-icon-button class="blue" icon="icons:file-download" title="Export Excel"></paper-icon-button>
           <paper-icon-button id="add-state" icon="add" title="Add States"></paper-icon-button>
+          <paper-icon-button id="add-state" icon="icons:chevron-left" title="Back"></paper-icon-button>
         </div>
       </page-header>
       <section>

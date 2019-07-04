@@ -10,9 +10,6 @@ export const LTM_PAGES: string[] = [
 export const NAVS: object[] = [
   { name: "navigation", icon: "view-module" },
   { name: "geography", icon: "language" },
-  { name: "databases", icon: "credit-card" },
-  { name: "external_feeds", icon: "list" },
-  { name: "current_lil_database", icon: "dns" },
 ];
 
 export const SIDE_NAV_LINKS: any = {
@@ -41,12 +38,7 @@ export const SIDE_NAV_LINKS: any = {
       title: "Glossary of Terms",
       icon: "list",
       routeName: "glossary",
-    },
-    {
-      title: "Exit",
-      icon: "dfw:arrow-long-left",
-      routeName: "login",
-    },
+    }
   ],
   geography: [
     {

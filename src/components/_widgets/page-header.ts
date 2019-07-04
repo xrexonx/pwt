@@ -19,7 +19,6 @@ class PageHeader extends PolymerElement {
       <style>
         app-header {
           color: #222;
-          /*background-color: #0568ae;*/
         }
         app-toolbar {
           height: 50px;

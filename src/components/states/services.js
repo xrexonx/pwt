@@ -1,3 +1,7 @@
+export function searchStates(states) {
+  console.log(states)
+}
+
 export function fetchStates() {
   // return fetch('http://localhost:8080/api/states')
   // .then(resp => resp.json())

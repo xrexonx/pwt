@@ -22,6 +22,7 @@ import { dataTableStyles } from '../_widgets/data-tables/data-table-style';
 import { dataTableDefaultProps } from '../_widgets/data-tables/data-table-props';
 import { tableFooter } from '../_widgets/data-tables/data-table-footer';
 import { fetchStates } from "./services";
+import DataTableMixin from "./MyMixin";
 
 const debounce = (fn, time) => {
   let timeout;
@@ -32,10 +33,16 @@ const debounce = (fn, time) => {
   }
 };
 
-class StateList extends PolymerElement {
+class StateList extends DataTableMixin(PolymerElement) {
   async ready() {
     super.ready();
-    this.set('rawItems', await fetchStates());
+    this.initialize()
+  }
+
+  async fetchRecords() {
+    const records = await fetchStates();
+    console.log({records});
+    this.set('rawItems', records);
   }
 
   static get properties() {
